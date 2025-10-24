@@ -961,7 +961,7 @@ html, body {
     
     .desktop-area {
         overflow-y: auto;
-        min-height: calc(100vh - 3.75rem);
+        min-height: calc(100vh - 8rem); /* Ajustar para taskbar más alta */
     }
     
     .skills-grid,
@@ -969,20 +969,66 @@ html, body {
         grid-template-columns: 1fr;
     }
     
-    .taskbar-center {
-        display: flex !important;
+    .gaming-taskbar {
+        display: grid;
+        grid-template-areas: 
+            "center center center"
+            "center center center"
+            "left . right";
+        grid-template-columns: auto 1fr auto;
+        grid-template-rows: auto auto auto;
+        height: auto;
+        padding: 5px 10px;
         gap: 5px;
     }
     
-    .taskbar-item {
-        padding: 6px 8px;
-        font-size: 10px;
-        min-width: 40px;
+    .taskbar-center {
+        grid-area: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        gap: 5px;
     }
     
-    .gaming-taskbar {
-        height: 50px;
-        padding: 0 10px;
+    .taskbar-left {
+        grid-area: left;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .taskbar-right {
+        grid-area: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+    .taskbar-item {
+        padding: 6px 4px;
+        font-size: 10px;
+        text-align: center;
+        min-width: 0;
+    }
+    
+    .logo-text {
+        font-size: 14px;
+    }
+    
+    .logo-subtitle {
+        font-size: 6px;
+    }
+    
+    .system-time {
+        font-size: 12px;
+    }
+    
+    .system-stats {
+        gap: 5px;
+    }
+    
+    .stat-item {
+        font-size: 14px;
     }
     
     .glitch-text.nickname-primary {
