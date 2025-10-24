@@ -4,215 +4,352 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="files/css/styles.css" />
-    <title>GabsR</title>
+    <link rel="stylesheet" href="files/css/styles-gaming.css" />
+    <link rel="icon" href="files/img/favicon.svg" type="image/svg+xml">
+    <title>GabsR - Gaming Setup</title>
   </head>
-  <body id="inicio">
-    <header>
-      <div class="content-header">
-        <a href="#section-1">
-          <div class="logo">
-            <span>GR</span>
+  <body id="inicio" class="gaming-setup">
+    <!-- RGB Gaming Background Effect -->
+    <div class="rgb-lines"></div>
+    <div class="scan-lines"></div>
+    
+    <!-- Gaming Taskbar -->
+    <div class="gaming-taskbar">
+      <div class="taskbar-left">
+        <div class="taskbar-logo">
+          <span class="logo-text">
+            <span class="letter-k">K</span><span class="letter-i">I</span><span class="letter-k2">K</span><span class="letter-g">G</span><span class="letter-a">A</span><span class="letter-b">B</span><span class="dash">-</span><span class="letter-o">O</span><span class="letter-s">S</span>
+          </span>
+          <span class="logo-subtitle">gaming system</span>
+        </div>
+        <div class="system-time" id="system-time"></div>
+      </div>
+      <div class="taskbar-center">
+        <div class="taskbar-item active" data-window="inicio">
+          <span>👤</span> Inicio
+        </div>
+        <div class="taskbar-item" data-window="sobre-mi">
+          <span>📄</span> About
+        </div>
+        <div class="taskbar-item" data-window="skills">
+          <span>⚡</span> Skills
+        </div>
+        <div class="taskbar-item" data-window="educacion">
+          <span>🎓</span> Educación
+        </div>
+        <div class="taskbar-item" data-window="experience">
+          <span>💼</span> Work
+        </div>
+        <div class="taskbar-item" data-window="contact">
+          <span>📧</span> Contact
+        </div>
+      </div>
+      <div class="taskbar-right">
+        <div class="system-stats">
+          <span class="stat-item">🔊</span>
+          <span class="stat-item">🌐</span>
+          <span class="stat-item theme-toggle" id="theme-toggle">🌙</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Desktop Area -->
+    <main class="desktop-area">
+      
+      <!-- Window 1: Inicio/Hero -->
+      <div class="window-container active initial-center" id="window-inicio" data-window="inicio">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-icon">👤</span>
+            <span>user_profile.exe</span>
           </div>
-        </a>
-        <div class="content-menu">
-          <div class="menu">
-            <div class="menu-status"></div>
+          <div class="window-controls">
+            <button class="win-btn minimize">_</button>
+            <button class="win-btn maximize">□</button>
+            <button class="win-btn close">×</button>
           </div>
         </div>
-        <nav>
-          <ul>
-            <li><a class="li-menu" href="#section-1">Inicio</a></li>
-            <li><a class="li-menu" href="#section-2">Sobre mi</a></li>
-            <li><a class="li-menu" href="#section-3">Habilidades</a></li>
-            <li><a class="li-menu" href="#section-4">Experiencia</a></li>
-            <li><a class="contacto-color li-menu" href="#section-5">Contacto</a></li>
-            <li class="languagesModo"><a>Languages</a></li>
-            <li class="themePageModo"><span class="status"></span></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <section id="section-1">
-        <div class="content-section">
-          <div>
-            <div class="inicio">
-              <p>Hola, mi nombre es</p>
-              <h2>Gabriel Rodríguez</h2>
-              <h6>y soy</h6>
-              <h2>Estudiante de Ingenieria Informática</h2>
+        <div class="window-body">
+          <div class="terminal-content">
+            <div class="terminal-line">
+              <span class="prompt">root@gabsr:~$</span> <span class="command">whoami</span>
+            </div>
+            <div class="output">
+              <h1 class="glitch-text nickname-primary" data-text="THEALEXKIKGAB">THEALEXKIKGAB</h1>
+              <h2 class="name-text">Gabriel Rodríguez</h2>
+              <h2 class="role-text">
+                <span class="typing-effect">Especialista en Automatización & Backend</span>
+              </h2>
+              <div class="tech-stack">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Google Apps Script</span>
+              </div>
             </div>
           </div>
         </div>
-        <a href="#section-2">
-          <div class="content-seta-scroll" id="seta-1">
-          <div class="seta-scroll"></div>
+        <div class="resize-handle"></div>
+      </div>
+
+      <!-- Window 2: Sobre Mi -->
+      <div class="window-container" id="window-sobre-mi" data-window="sobre-mi">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-icon">📄</span>
+            <span>about_me.md</span>
+          </div>
+          <div class="window-controls">
+            <button class="win-btn minimize">_</button>
+            <button class="win-btn maximize">□</button>
+            <button class="win-btn close">×</button>
+          </div>
         </div>
-      </a>
-      </section>
-      <section id="section-2">
-        <div class="content-section">
-          <div>
-            <div class="sobre-mi">
-              <h6>Sobre mi</h6>
+        <div class="window-body">
+          <div class="markdown-content">
+            <h3># Sobre mi</h3>
+            <p>Mi nombre es <span class="highlight">Gabriel Alejandro Rodríguez Da Silva</span>, Estudiante de <span class="highlight">INGENIERÍA INFORMÁTICA</span> (9no semestre) y <span class="highlight">Presidente del Club Crecimiento Tecnológico</span> en mi universidad.</p>
+            <p>Especializado en <span class="highlight">automatizaciones empresariales</span>, <span class="highlight">desarrollo backend</span> y <span class="highlight">soluciones de gestión operacional</span>.</p>
+            <p>He liderado proyectos estratégicos como <span class="highlight">SISGR (Sistema de Gestión de Reclamos)</span> utilizando FastAPI, PostgreSQL y Google Apps Script, optimizando procesos en áreas de alto impacto.</p>
+            <p>Con experiencia en administración de sistemas (Proxmox, Windows Server, Debian), redes (pfSense) y desarrollo full-stack, combino mis habilidades técnicas con capacidad para comunicar conceptos complejos.</p>
+          </div>
+        </div>
+        <div class="resize-handle"></div>
+      </div>
+      <!-- Window 3: Skills -->
+      <div class="window-container" id="window-skills" data-window="skills">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-icon">⚡</span>
+            <span>skills_tree.json</span>
+          </div>
+          <div class="window-controls">
+            <button class="win-btn minimize">_</button>
+            <button class="win-btn maximize">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="window-body">
+          <div class="skills-grid">
+            <div class="skill-category" id="lang-category">
+              <h4 class="category-title">&gt; Lenguajes</h4>
+              <div class="skill-items">
+                <div class="skill-card"><img height="30" src="files/img/python.svg"> Python</div>
+                <div class="skill-card"><img height="30" src="files/img/js-ico.svg"> JavaScript</div>
+                <div class="skill-card"><img height="30" src="files/img/php.svg"> PHP</div>
+                <div class="skill-card"><img height="30" src="files/img/html5-ico.svg"> HTML</div>
+                <div class="skill-card"><img height="30" src="files/img/css3-ico.svg"> CSS</div>
+                <div class="skill-card">JSON/XML</div>
+              </div>
+            </div>
+            
+            <div class="skill-category" id="framework-category">
+              <h4 class="category-title">&gt; Frameworks</h4>
+              <div class="skill-items">
+                <div class="skill-card"><img height="30" src="files/img/FastAPI_logo.svg"> FastAPI</div>
+                <div class="skill-card"><img height="30" src="files/img/django-logo-positive.svg" style="filter: brightness(0) invert(1);"> Django</div>
+                <div class="skill-card"><img height="30" src="files/img/Google_Apps_Script.svg"> Apps Script</div>
+                <div class="skill-card"><img height="30" src="files/img/Laravel.svg"> Laravel</div>
+              </div>
+            </div>
+            
+            <div class="skill-category" id="devops-category">
+              <h4 class="category-title">&gt; DevOps/Infra & Soluciones</h4>
+              <div class="skill-items">
+                <div class="skill-card"><img height="30" src="files/img/Logo_Proxmox.svg"> Proxmox VE</div>
+                <div class="skill-card"><img height="30" src="files/img/PfSense_logo.svg" style="filter: brightness(1.5);"> pfSense</div>
+                <div class="skill-card"><img height="30" src="files/img/Windows_Server_logo.svg" style="filter: brightness(1.5);"> Windows Server</div>
+                <div class="skill-card"><img height="30" src="files/img/debian-ico.svg"> Debian</div>
+                <div class="skill-card"><img height="30" src="files/img/SUSE_Logo-vert_L_Green-pos_sRGB.svg"> SUSE</div>
+                <div class="skill-card"><img height="30" src="files/img/Git-Icon-1788C.svg"> Git</div>
+                <div class="skill-card"><img height="30" src="files/img/vscode.svg"> VSCode</div>
+                <div class="skill-card"><img height="30" src="files/img/Postgresql_elephant.svg"> PostgreSQL</div>
+                <div class="skill-card"><img height="30" src="files/img/automatizacion.svg" style="filter: brightness(0) invert(1);"> Automatización</div>
+                <div class="skill-card"><img height="30" src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/figma.svg" style="filter: brightness(0) invert(1);"> UX/UI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="resize-handle"></div>
+      </div>
+
+      <!-- Window 4: Educación -->
+      <div class="window-container" id="window-educacion" data-window="educacion">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-icon">🎓</span>
+            <span>education.txt</span>
+          </div>
+          <div class="window-controls">
+            <button class="win-btn minimize">_</button>
+            <button class="win-btn maximize">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="window-body">
+          <div class="education-content">
+            <h3>🎓 Educación</h3>
+            <div class="education-item">
+              <h4>UNIVERSIDAD ALEJANDRO DE HUMBOLDT</h4>
+              <p><strong>Ingeniería Informática</strong></p>
+              <p>9no Semestre - En curso</p>
+            </div>
+            <div class="education-item">
+              <h4>Club Crecimiento Tecnológico</h4>
+              <p><strong>Presidente</strong></p>
+              <p>2024 - Actualidad</p>
+              <p>Liderazgo en proyectos tecnológicos y eventos de formación.</p>
+            </div>
+            <div class="education-item">
+              <h4>Cursos y Certificaciones</h4>
+              <p><strong>CENEAC Producciones, C.A.</strong></p>
+              <p>Introducción a la Programación I y II</p>
+            </div>
+          </div>
+        </div>
+        <div class="resize-handle"></div>
+      </div>
+
+      <!-- Window 5: Experience -->
+      <div class="window-container" id="window-experience" data-window="experience">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-icon">💼</span>
+            <span>work_history.log</span>
+          </div>
+          <div class="window-controls">
+            <button class="win-btn minimize">_</button>
+            <button class="win-btn maximize">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="window-body scrollable">
+          <div class="experience-timeline">
+            
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>🏢 Proyecto Júpiter (Entidad Financiera)</h4>
+                <span class="exp-date">Agosto 2025 - Actualidad</span>
+              </div>
+              <div class="exp-role">Especialista en Automatización y Backend</div>
+              <div class="exp-tasks">
+                <div class="task-item">
+                  <span class="task-bullet">▸</span>
+                  <span><strong>SISGR:</strong> Arquitectura backend con FastAPI y PostgreSQL, modelos SQLAlchemy</span>
+                </div>
+                <div class="task-item">
+                  <span class="task-bullet">▸</span>
+                  <span><strong>SISGR Lite:</strong> Solución ágil en Google Apps Script con procesamiento resiliente</span>
+                </div>
+                <div class="task-item">
+                  <span class="task-bullet">▸</span>
+                  <span><strong>Express AT13:</strong> Ejecutable Python (Tkinter) para automatización de reportes</span>
+                </div>
+                <div class="task-item">
+                  <span class="task-bullet">▸</span>
+                  <span><strong>MonitorPlus 350:</strong> Script Python para filtrado automático de Excel</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>🏥 FUNDASALUD DC</h4>
+                <span class="exp-date">Octubre 2023 - Noviembre 2024</span>
+              </div>
+              <div class="exp-role">Apoyo Administrativo - Soporte Técnico</div>
+              <div class="exp-tasks">
+                <div class="task-item">
+                  <span class="task-bullet">▸</span>
+                  <span>Sistema de inventario con Django y PostgreSQL</span>
+                </div>
+                <div class="task-item">
+                  <span class="task-bullet">▸</span>
+                  <span>Administración servidor Dell R720 con Proxmox VE (Windows Server, Debian)</span>
+                </div>
+                <div class="task-item">
+                  <span class="task-bullet">▸</span>
+                  <span>Configuración de redes con pfSense y Squid</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="resize-handle"></div>
+      </div>
+
+      <!-- Window 5: Contact -->
+      <div class="window-container" id="window-contact" data-window="contact">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-icon">📧</span>
+            <span>contact_info.txt</span>
+          </div>
+          <div class="window-controls">
+            <button class="win-btn minimize">_</button>
+            <button class="win-btn maximize">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="window-body">
+          <div class="contact-grid">
+            <a href="https://www.linkedin.com/in/gabriel-rodríguez-270167183/" target="_blank" class="contact-card">
+              <img height="40" src="files/img/linkedin-ico.svg">
               <div>
-                <p>Mi nombre es <b>Gabriel Alejandro Rodríguez Da Silva</b>, Soy músico y estudio <b>INGENIERÍA INFORMÁTICA</b> desde 2021</p>
-                <p>La inteligencia artificial bien integrada puede favorecer la tarea del programador.
-                </p></br>
-                <p>Siempre con mis audífonos, coloco mi música y algunos tutoriales y empiezo a programar.</p>
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">Gabriel Rodríguez</div>
               </div>
-            </div>
+            </a>
+            
+            <a href="https://github.com/TheAlexkikgab" target="_blank" class="contact-card">
+              <img height="40" src="files/img/github-ico.svg" style="filter: brightness(250%);">
+              <div>
+                <div class="contact-label">GitHub</div>
+                <div class="contact-value">TheAlexkikgab</div>
+              </div>
+            </a>
+            
+            <a href="mailto:gabrielo.aler@gmail.com" class="contact-card">
+              <img height="40" src="files/img/Gmail_icon_(2020).svg">
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">gabrielo.aler@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="mailto:thealexkikgab@gmail.com" class="contact-card">
+              <img height="40" src="files/img/Gmail_icon_(2020).svg">
+              <div>
+                <div class="contact-label">Email</div>
+                <div class="contact-value">thealexkikgab@gmail.com</div>
+              </div>
+            </a>
           </div>
         </div>
-        <a href="#section-3">
-          <div class="content-seta-scroll" id="seta-2">
-          <div class="seta-scroll"></div>
-        </div>
-      </a>
-      </section>
-      <section id="section-3">
-        <div class="content-section">
-          <div>
-            <div class="habilidades">
-              <h6>Habilidades</h6>
-              <div class="content-skills">
-                <div class="content-btn">
-                  <table style="width:100%">
-                    <tr>
-                      <td id="btn-1" class="active-skill"><b>Habilidades</b></td>
-                      <td id="btn-2"><b>Librerías</b></td>
-                    </tr>
-                    <tr>
-                      <td id="btn-3"><b>Tecnologías</b></td>
-                      <td id="btn-4"><b>Herramientas</b></td>
-                    </tr>
-                  </table>
-                </div>
-                <div class="skills">
-                  <div id="skill-1" class="skill active-skill">
-                    <ul>
-                      <li><img alt="GabsR-Python" height="40" src="files/img/python.svg"> Python</li>
-                      <li><img alt="GabsR-React" height="40" src="files/img/react.svg"> React</li>
-                      <li><img alt="GabsR-HTML" height="40" src="files/img/html5-ico.svg">HTML 5</li>
-                      <li><img alt="GabsR-CSS" height="40" src="files/img/css3-ico.svg">CSS 3</li>
-                    </ul>
-                  </div>
-                  <div id="skill-2" class="skill">
-                    <ul>
-                      <li><img alt="GabsR-Pygame" height="40" src="files/img/pygame_tiny.png">Pygame</li>
-                    </ul>
-                  </div>
-                  <div id="skill-3" class="skill">
-                    <ul>
-                      <li><img alt="GabsR-SD" height="40" src="files/img/SD_icon.png">Stable Diffusion</li>
-                      <li><img alt="GabsR-Git" height="40" src="files/img/git-ico.svg">Git</li>
-                      <li><img alt="GabsR-GitHub" height="40" style="filter: brightness(250%);" src="files/img/girhub-ico.svg">GitHub</li>
-                    </ul>
-                  </div>
-                  <div id="skill-4" class="skill">
-                    <ul>
-                      <li><img alt="GabsR-VSCode" height="40" src="files/img/vscode-ico.svg">VS Code</li>
-                      <li><img alt="GabsR-codespaces" height="40" src="files/img/codespaces-ico.png">Codespaces</li>
-                      <li><img alt="GabsR-Collab" height="40" src="files/img/google-colab.svg">Google Collab</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#section-4"><div class="content-seta-scroll" id="seta-3">
-          <div class="seta-scroll"></div>
-        </div></a>
-      </section>
-      <section id="section-4">
-        <div class="content-section">
-          <div>
-            <div class="experiencia">
-              <h6>Experiencia</h6>
-              <div class="content-empresas">
-                <div class="nombre-empresa">
-                  <div id="empresa-1"><b>Empresa: </b><p>N/A</p></div>
-                </div>
-                <div class="info-empresa">
-                  <div id="info-empresa-1">
-                    <b>Cargo: </b><p>N/A</p>
-                    <br>
-                    <b>Tiempo en la Compañía: </b><p>N/A</p>
-                    <br>
-                    <br>
-                    <b>Tareas: </b><p>N/A</p>
-                    <br>
-                    <b>Sitio: </b><a target="_blank" href="https://www.linkedin.com/in/gabriel-rodríguez-270167183/">N/A</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a href="#section-5">
-          <div class="content-seta-scroll" id="seta-4">
-          <div class="seta-scroll"></div>
-        </div>
-      </a>
-      </section>
-      <section id="section-5">
-        <div class="content-section">
-          <div>
-            <div class="contacto">
-              <div class="content-contacto">
-                <div>
-                  <a target="_blank" href="https://www.linkedin.com/in/gabriel-rodríguez-270167183/">
-                    <img height="40px" src="files/img/linkedin-ico.svg" />
-                    <p>Gabriel Rodríguez</p>
-                </a>
-                </div>
-                <div>
-                  <a target="_blank" href="https://github.com/TheAlexkikgab">
-                    <img alt="GabsR-GitHub" height="40" style="filter: brightness(250%);" src="files/img/girhub-ico.svg">
-                    <p>TheAlexkikgab</p>
-                </a>
-                </div>
-                <div>
-                  <a target="_blank">
-                    <img alt="GabsR-Email" height="40" src="files/img/outlook-ico.svg">
-                    <p>gabriel_aler@hotmail.com</p>
-                </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="content-cubo">
-          <div class="cubo"></div>
-        </div>
-      </section>
-      <div class="barra-desk">
-        <span></span><span></span><span></span><span></span><span></span>
+        <div class="resize-handle"></div>
       </div>
-    </main> 
-    <div class="loading" style="opacity: 1">
-      <div class="content-loading">
-        <div class="esperando-loading" style="opacity: 1">
-          <div class="pong-loader"></div>
-          <span class="text-loading">loading...</span>
+
+    </main>    
+    <!-- Boot Screen -->
+    <div class="boot-screen" id="boot-screen">
+      <div class="boot-content">
+        <div class="boot-logo">
+          <span class="boot-text">
+            <span class="letter-k">K</span><span class="letter-i">I</span><span class="letter-k2">K</span><span class="letter-g">G</span><span class="letter-a">A</span><span class="letter-b">B</span><span class="dash">-</span><span class="letter-o">O</span><span class="letter-s">S</span>
+          </span>
+          <span class="boot-subtitle">gaming system</span>
         </div>
-        <div class="gmp" style="opacity: 0">
-          <span class="diamante-negro"></span>
-          <span>GabsR</span>
+        <div class="boot-loading">
+          <div class="loading-bar">
+            <div class="loading-progress"></div>
+          </div>
+          <div class="boot-message">Initializing system...</div>
         </div>
       </div>
     </div>
-    <div class="languages-option">
-      <div class="x-languages-option"><span>X</span></div>
-      <div class="content-languages-option">
-        <div id="englishPageModo"><span><img src="files/img/estados-unidos-ico.png" alt="English"></span><span>English</span></div>
-        <div id="spanishPageModo"><span><img src="files/img/espana-ico.png" alt="Español"></span><span>Español</span></div>
-      </div>
-    </div>
+
     <script src="files/js/jquery-v3.6.0.js"></script>
-    <script src="files/js/scripts.js"></script>
-    <script src="files/js/loading.js"></script>
-  </body>
+    <script src="files/js/scripts-gaming.js"></script>
+</body>
 </html>
