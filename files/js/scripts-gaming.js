@@ -399,7 +399,8 @@ $(document).ready(function() {
                     'margin': '10px auto'
                 });
             });
-            $('.taskbar-center').hide();
+            $('.desktop-area').css('overflow-y', 'auto');
+            // Taskbar center remains visible on mobile
         } else {
             // On desktop, reset to bento grid positions
             $('.window-container').css({
@@ -412,7 +413,7 @@ $(document).ready(function() {
                 'height': '',
                 'margin': ''
             });
-            $('.taskbar-center').show();
+            $('.desktop-area').css('overflow-y', '');
         }
     }
     

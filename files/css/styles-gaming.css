@@ -970,7 +970,19 @@ html, body {
     }
     
     .taskbar-center {
-        display: none;
+        display: flex !important;
+        gap: 5px;
+    }
+    
+    .taskbar-item {
+        padding: 6px 8px;
+        font-size: 10px;
+        min-width: 40px;
+    }
+    
+    .gaming-taskbar {
+        height: 50px;
+        padding: 0 10px;
     }
     
     .glitch-text.nickname-primary {
